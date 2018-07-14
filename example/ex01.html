@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gravalay example</title>
+
+    <!-- Bootstrap - not needed, just for simpler markup and css here in this example -->
+    <link
+            rel="stylesheet"
+            href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+            integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+            crossorigin="anonymous"
+    >
+</head>
+<body>
+
+    <div class="container">
+        <img
+                class="gravalay-replace"
+                src="https://via.placeholder.com/80x80"
+                data-gravalay-size="80"
+                data-gravalay-mail="mz@solutiondrive.de"
+                data-gravalay-hash="03b1133da54ecedeac97c6eccc61e783"
+        >
+        <img
+                class="gravalay-replace"
+                src="https://via.placeholder.com/200x200"
+                data-gravalay-size="200"
+                data-gravalay-hash="03b1133da54ecedeac97c6eccc61e784"
+        >
+    </div>
+
+    <script
+        src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+        crossorigin="anonymous"
+    ></script>
+    <script src="../src/jquery.gravalay.js"></script>
+    <script>
+        $('.gravalay-replace').gravalay();
+    </script>
+</body>
+</html>

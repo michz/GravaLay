@@ -1,0 +1,18 @@
+language: node_js
+node_js:
+  - "9"
+
+script:
+  - yarn run gulp
+  - ls -la ./dist
+
+deploy:
+  provider: releases
+  api_key:
+    secure: EPNJvZkORsOyRsdiDzc23BwQcfqgT0vbBiyBFP4hvLa0w15LZZ+Rh3OquLzGCVL3HNb2h3iog7WmO8eqtXUVuwWhO1goK8IuIK4fxVXQiGH7mnfyJd4R5WcjF3LmRnZDyO9CwA2Oppb2zbWXv2A2jZJ6458H57l5LPmFT5RDu0w9aAfD6qj9AhX0WCY+s1wWodvZm2EAOcuzGCdCU+klK7yV93EGhz4b+4DjneV4O5YEbeVGqFP7GwOxUul1RpEcr/E83atIq8pN8WyTUCBcPVN1bWW6rD3iFiZtmIXhzA+2XutXo7DfOJW1GW7DuI0PTwdFwI26iGZ9MnbkZHjJyOwD+uCBMt9fRbsDNcOFUOiuuK/VuaEyYmeVfPzGSRx8tHQhyP5KBrbzp3TW+gvxcPwmVzZcL5pVRe05mBH+9Wv9/BlQVC2lumsRR9VYdbUozLiItWgvDgSj/rIpCvfvTkBA0DVU5/K6V2IANe0JfCDXK2Cpr0gMebeg0aizopJfY0k6zZkEFoGcG4AcOsUuP0LAanCOMQD4rGvuHlBbjrhb+zIEf1yPVgNj050Ps/B1O39SJaZRvh5Yvu6G3SVkHFiNTJ+mGOQe4fK526CMAjj+DvOUMM4EYVcZnEryL5gawfmspmGemW1Zn+gpetuT5TgePWbPD8qdcVogq5y91Fo=
+  file:
+    - dist/jquery.gravalay.js
+    - dist/jquery.gravalay.min.js
+  skip_cleanup: true
+  on:
+    tags: on
